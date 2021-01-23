@@ -10,6 +10,22 @@ namespace DataStructures
             VerifyDoubleLinkedList();
             VerifyStack();
             VerifyQueue();
+
+            VerifyQuickSort();
+        }
+
+        private static void VerifyQuickSort()
+        {
+            int[] items = new int[] { 4, -2, 5, 6, 1, 2, 88 };
+
+            var sortedItems = QuickSort.Sort(items, 0, items.Length);
+
+            for (int cnt = 0; cnt < sortedItems.Length; cnt++)
+            {
+                Console.WriteLine(sortedItems[cnt]);
+            }
+
+            Console.ReadKey();
         }
 
         private static void VerifyQueue()
